@@ -18,6 +18,6 @@ Workaround 2: Remove bullets and improve spacing in custom CSS (does not look ni
 
 Possible fixes:
 
-* Show checkbox icons: Replace icon classes Replace icon class `icon-check` with `far fa-check-square` and `icon-check-empty` with `far fa-square` in `templates/ulist.html.slim` and `lib/asciidoctor-revealjs/converter.rb`.
+* Show checkbox icons: Replace icon class `icon-check` with `far fa-check-square` and `icon-check-empty` with `far fa-square` in `templates/ulist.html.slim` and `lib/asciidoctor-revealjs/converter.rb`.
 
 * Remove bullets in check lists and fix spacing: Maybe [#451](https://github.com/asciidoctor/asciidoctor-reveal.js/pull/451) would solve that.
