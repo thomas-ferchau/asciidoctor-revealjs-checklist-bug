@@ -1,0 +1,14 @@
+/*
+    Workaround: Checklist without bullet list items
+    https://github.com/asciidoctor/asciidoctor-reveal.js/issues/526
+    (maybe more list styles need to be modified, see https://github.com/asciidoctor/asciidoctor-reveal.js/pull/451/files)
+*/
+.reveal ul.checklist {
+  list-style-type:none;
+}
+.reveal ul.checklist li p {
+  text-indent: -0.7em;
+}
+.reveal ul.checklist li p i {
+  margin-right: 0.5em;
+}

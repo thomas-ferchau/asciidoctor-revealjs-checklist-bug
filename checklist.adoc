@@ -1,0 +1,19 @@
+= Checklist Bug
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@4.1.2
+// :icons: font
+// :docinfo: shared
+// :customcss: checklist-style.css
+
+== Slide with checkboxes
+
+List with checkboxes::
+* [*] checked
+* [x] also checked
+* [ ] not checked
+* normal list item
+
+//-
+
+List without checkboxes::
+* First Item
+* Second item

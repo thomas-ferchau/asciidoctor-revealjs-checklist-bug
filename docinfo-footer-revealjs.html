@@ -1,0 +1,16 @@
+<script>
+    /*
+        Add Font Awesome styles for checkboxes (checked and unchecked)
+        (workaround to a bug in asciidoctor-revealjs: https://github.com/asciidoctor/asciidoctor-reveal.js/issues/526)
+    */
+    var tmp = document.getElementsByClassName("icon-check");
+    for (var i=0; i<tmp.length; i++) {
+        tmp[i].classList.add("far")
+        tmp[i].classList.add("fa-check-square");
+    }
+    var tmp = document.getElementsByClassName("icon-check-empty");
+    for (var i=0; i<tmp.length; i++) {
+        tmp[i].classList.add("far");
+        tmp[i].classList.add("fa-square");
+    }
+</script>

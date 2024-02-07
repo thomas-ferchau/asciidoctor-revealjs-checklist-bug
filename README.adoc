@@ -1,0 +1,42 @@
+= Checklist Bug in asciidoctor-revealjs
+
+== Bug description
+
+* link:https://github.com/asciidoctor/asciidoctor-reveal.js/issues/526[Link to GitHub issue^] #526
+
+* link:github-issue/README.md[Text and images copied from GitHub issue]
+
+== Re-Create slides
+
+Start Container::
++
+NOTE: You can use the container to run Asciidoc tools without installation. The example show bash syntax.
++
+[source,bash]
+----
+docker run -it -u $(id -u):$(id -g) \
+    -v "$(pwd)":/documents/ \
+    asciidoctor/docker-asciidoctor
+----
+
+Create slides::
++
+NOTE: You can run the following command in the Asciidoc container after starting it.
++
+[source,bash]
+----
+asciidoctor-revealjs -v \
+    checklist.adoc -o slides/checklist-default-ok.html
+
+asciidoctor-revealjs -v \
+    -a icons=font \
+    checklist.adoc -o slides/checklist-missing-checkboxes.html
+
+asciidoctor-revealjs -v \
+    -a icons=font -a docinfo=shared \
+    checklist.adoc -o slides/checklist-workaround1.html
+
+asciidoctor-revealjs -v \
+    -a icons=font -a docinfo=shared -a customcss=checklist-style.css \
+    checklist.adoc -o slides/checklist-workaround2.html
+----
